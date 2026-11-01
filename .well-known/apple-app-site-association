@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "XK6NK27ZSK.com.mherda.ExploreClaim"
+        ],
+        "components": [
+          {
+            "/": "/join*",
+            "comment": "Hexclaim group invites"
+          }
+        ]
+      }
+    ]
+  }
+}

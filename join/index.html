@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hexclaim group invite</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f2f2f7;
+    color: #1c1c1e;
+  }
+  main {
+    max-width: 26rem;
+    margin: 1.5rem;
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
+    background: #fff;
+    text-align: center;
+  }
+  h1 { font-size: 1.4rem; margin: 0 0 1rem; }
+  p { margin: 0 0 1rem; }
+  .code {
+    display: block;
+    margin: 1.25rem 0;
+    font: 600 2rem/1.2 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: 0.12em;
+    user-select: all;
+    -webkit-user-select: all;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #000; color: #f2f2f7; }
+    main { background: #1c1c1e; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div id="invite" hidden>
+    <h1>You're invited to a Hexclaim group</h1>
+    <span class="code" id="code"></span>
+    <p>Install Hexclaim on your iPhone, then tap the invite link again, or open Journal › Friends › Join with a code and enter this code.</p>
+  </div>
+  <div id="broken">
+    <h1>Hexclaim</h1>
+    <p>This invite link isn't complete. Ask for a new one.</p>
+  </div>
+</main>
+<script>
+  // The same rules as the app's InviteLink: 10 Crockford base32 characters, any case,
+  // spaces and hyphens ignored. Nothing is sent anywhere.
+  (function () {
+    var raw = new URLSearchParams(window.location.search).get("code") || "";
+    var code = raw.replace(/[\s-]/g, "").toUpperCase();
+    if (/^[0-9A-HJKMNP-TV-Z]{10}$/.test(code)) {
+      document.getElementById("code").textContent = code;
+      document.getElementById("invite").hidden = false;
+      document.getElementById("broken").hidden = true;
+    }
+  })();
+</script>
+</body>
+</html>
