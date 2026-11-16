@@ -40,7 +40,7 @@
 <body>
 <main>
 <h1>Hexclaim privacy policy</h1>
-<p class="updated">Last updated 3 November 2026</p>
+<p class="updated">Last updated 16 November 2026</p>
 
 <div class="summary">
 <ul>
@@ -73,7 +73,8 @@
 <p>The other members of a group can see your display name and your hexes in that group. We use this data only to run friend groups, which is the service you ask for when you join one.</p>
 
 <h2>Maps and places</h2>
-<p>To work out which area you're in and which places are nearby, Hexclaim sends a position rounded to about 100 metres to OpenStreetMap's public map servers (Overpass and Nominatim), once for each new area. When you tap Nearest new one in Collections and no matching place is already saved on your phone, it also sends a rounded position and the kind of place you're looking for, to find the nearest ones. No account id or other identifier is sent with either. When you ask for a suggested walk, Apple Maps provides the walking directions.</p>
+<p>To work out which area you're in, Hexclaim sends the positions you've walked, rounded to about 100 metres, to our server at Supabase (European Union, Ireland). After a reinstall it may send all of them at once. The server answers from a shared store of area outlines (such as boroughs and cities) taken from OpenStreetMap. Only when it doesn't know an area yet does it pass a rounded position on to OpenStreetMap's public map servers (Overpass and Nominatim). If our server can't be reached, the app asks OpenStreetMap directly instead. The server keeps the area outlines, and it keeps a rounded position only where no local area, or no area at all, covers it (at sea, for example), so it isn't looked up again. These positions are stored with no account id, no time and nothing else that links them to you or to each other.</p>
+<p>To show which places are nearby, Hexclaim sends a position rounded to about 100 metres to OpenStreetMap's public map servers. When you tap Nearest new one in Collections and no matching place is already saved on your phone, it also sends a rounded position and the kind of place you're looking for, to find the nearest ones. No account id or other identifier is sent with any of these. When you ask for a suggested walk, Apple Maps provides the walking directions.</p>
 
 <h2>Invite links and this website</h2>
 <p>This website and its invite links are hosted by Vercel. Like most web hosts, Vercel keeps standard server logs, such as IP addresses, for a limited time. An invite link contains the group's invite code, which the page shows so you can type it into the app.</p>
@@ -85,6 +86,7 @@
 <ul>
   <li>Group data stays until it's removed. Leaving a group, or being removed from it, deletes your hexes in that group. Deleting a group deletes everything in it.</li>
   <li><strong>Settings › Account › Delete account</strong> deletes your account and everything we hold about you on our server straight away. It also signs Hexclaim out of your Apple ID, so it no longer appears under Sign in with Apple.</li>
+  <li>Area outlines and the rounded positions described under Maps and places are kept with no link to anyone, so they can't be found or deleted as yours.</li>
   <li>Data on your iPhone is removed when you delete the app. Your iCloud copy can be managed in your iPhone's iCloud settings.</li>
 </ul>
 
