@@ -40,7 +40,7 @@
 <body>
 <main>
 <h1>Hexclaim privacy policy</h1>
-<p class="updated">Last updated 16 November 2026</p>
+<p class="updated">Last updated 19 November 2026</p>
 
 <div class="summary">
 <ul>
@@ -73,7 +73,7 @@
 <p>The other members of a group can see your display name and your hexes in that group. We use this data only to run friend groups, which is the service you ask for when you join one.</p>
 
 <h2>Maps and places</h2>
-<p>To work out which area you're in, Hexclaim sends the positions you've walked, rounded to about 100 metres, to our server at Supabase (European Union, Ireland). After a reinstall it may send all of them at once. The server answers from a shared store of area outlines (such as boroughs and cities) taken from OpenStreetMap. Only when it doesn't know an area yet does it pass a rounded position on to OpenStreetMap's public map servers (Overpass and Nominatim). If our server can't be reached, the app asks OpenStreetMap directly instead. The server keeps the area outlines, and it keeps a rounded position only where no local area, or no area at all, covers it (at sea, for example), so it isn't looked up again. These positions are stored with no account id, no time and nothing else that links them to you or to each other.</p>
+<p>To work out which area you're in, Hexclaim sends the positions you've walked, rounded to about 100 metres, to our server at Supabase (European Union, Ireland). After a reinstall it may send all of them at once. The server answers from a store of area outlines (such as boroughs and cities) that we load from OpenStreetMap's published map data. It never passes your positions on to anyone, and it doesn't keep them: the only thing it records is a count, per country, of how often it was asked about a country we haven't loaded yet, with no position, account id or time. Where our server can't answer, or can't be reached, the app asks OpenStreetMap's public map servers (Overpass and Nominatim) directly, with a rounded position. Like any web host, Supabase keeps short-lived technical logs of requests, such as IP addresses, for security and troubleshooting.</p>
 <p>To show which places are nearby, Hexclaim sends a position rounded to about 100 metres to OpenStreetMap's public map servers. When you tap Nearest new one in Collections and no matching place is already saved on your phone, it also sends a rounded position and the kind of place you're looking for, to find the nearest ones. No account id or other identifier is sent with any of these. When you ask for a suggested walk, Apple Maps provides the walking directions.</p>
 
 <h2>Invite links and this website</h2>
@@ -86,7 +86,7 @@
 <ul>
   <li>Group data stays until it's removed. Leaving a group, or being removed from it, deletes your hexes in that group. Deleting a group deletes everything in it.</li>
   <li><strong>Settings › Account › Delete account</strong> deletes your account and everything we hold about you on our server straight away. It also signs Hexclaim out of your Apple ID, so it no longer appears under Sign in with Apple.</li>
-  <li>Area outlines and the rounded positions described under Maps and places are kept with no link to anyone, so they can't be found or deleted as yours.</li>
+  <li>Area outlines are public OpenStreetMap data. The per-country counts described under Maps and places have no link to anyone, so there is nothing in them to find or delete as yours.</li>
   <li>Data on your iPhone is removed when you delete the app. Your iCloud copy can be managed in your iPhone's iCloud settings.</li>
 </ul>
 
