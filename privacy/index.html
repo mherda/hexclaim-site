@@ -40,19 +40,21 @@
 <body>
 <main>
 <h1>Hexclaim privacy policy</h1>
-<p class="updated">Last updated 22 November 2026</p>
+<p class="updated">Last updated 25 November 2026</p>
 
 <div class="summary">
 <ul>
-  <li>Your walks, routes and claimed hexes stay on your iPhone and in your own iCloud, which we can't read.</li>
+  <li>Your walks, routes and claimed hexes stay on your phone and in your own iCloud or Google backup, which we can't read.</li>
   <li>Only if you use friend groups do we store anything about you: an account id, the names you type, and which hexes you claimed each week, without times or routes.</li>
-  <li>No ads, no tracking, no analytics, and we never sell data.</li>
+  <li>No ads, no tracking, no analytics, and we never sell data. Crash reports carry no location and nothing that identifies you.</li>
   <li>You can delete your account, and everything we hold about you, in the app.</li>
 </ul>
 </div>
 
 <h2>Who we are</h2>
 <p>Hexclaim is made by Marcin Herda, an independent developer in the United Kingdom, who is responsible for the data described here. You can contact us about privacy at <a href="mailto:privacy@hexclaim.space">privacy@hexclaim.space</a>.</p>
+
+<p>Hexclaim is available for iPhone and Android. This policy covers both apps; where they differ, it says so.</p>
 
 <h2>What stays on your iPhone and in your iCloud</h2>
 <p>To claim hexes, Hexclaim uses your location while you're on a walk. Your location trail, walks, claimed hexes, places you've found, progress, badges and privacy zones are stored on your iPhone and synced to your other devices through your private iCloud account. We have no access to this data.</p>
@@ -62,8 +64,17 @@
   <li><strong>Photos:</strong> Hexclaim only saves the share cards you choose to save. It doesn't read your photo library.</li>
 </ul>
 
+<h2>What stays on your Android phone and in your Google backup</h2>
+<p>The Android app uses your location while it's open, and during a walk you start, with a notification showing for as long as the walk lasts. Hexes are only claimed on a walk. Your claimed hexes, walks, places you've found, progress and badges are stored on your phone. Android backs them up to your own Google account, so they come back on a new phone or after a reinstall. Google encrypts the backup, and we have no access to it. You can turn backup off in your phone's settings.</p>
+<ul>
+  <li><strong>Physical activity:</strong> used on your phone to count your steps during a walk and to tell walking apart from cycling or driving. It isn't sent anywhere.</li>
+  <li><strong>Notifications:</strong> used for the walk in progress and for "Still walking?" reminders. They're created on your phone.</li>
+  <li><strong>Google services:</strong> your position comes from Google Play services, and the map is drawn by Google Maps, which receives requests for the part of the map on screen. Google handles these under its own privacy policy.</li>
+</ul>
+<p>Friend groups aren't in the Android app yet.</p>
+
 <h2>Friend groups</h2>
-<p>Friend groups are optional. If you use them, we store the following with our database provider, Supabase, in the European Union (Ireland):</p>
+<p>Friend groups are optional, and on iPhone only for now. If you use them, we store the following with our database provider, Supabase, in the European Union (Ireland):</p>
 <ul>
   <li><strong>An account id.</strong> You sign in with Apple. We don't ask Apple for your name or email address, so we don't receive them.</li>
   <li><strong>The names you type:</strong> your display name in a group, group names and co-op goals.</li>
@@ -73,8 +84,11 @@
 <p>The other members of a group can see your display name and your hexes in that group. We use this data only to run friend groups, which is the service you ask for when you join one.</p>
 
 <h2>Maps and places</h2>
-<p>To work out which area you're in, Hexclaim sends the positions you've walked, rounded to about 100 metres, to our server at Supabase (European Union, Ireland). After a reinstall it may send all of them at once. The server answers from a store of area outlines (such as boroughs and cities) that we load from OpenStreetMap's published map data. It never passes your positions on to anyone, and it doesn't keep them: the only thing it records is a count, per country, of how often it was asked about a country we haven't loaded yet, with no position, account id or time. Where our server can't answer, or can't be reached, the app asks OpenStreetMap's public map servers (Overpass and Nominatim) directly, with a rounded position. Like any web host, Supabase keeps short-lived technical logs of requests, such as IP addresses, for security and troubleshooting.</p>
-<p>To show which places are nearby, Hexclaim sends our server at Supabase the outline of the map area around you, several kilometres across. To count the places of one kind in an area, for Collections, it sends that area's OpenStreetMap id and the kind of place. When you tap Nearest new one in Collections and no matching place within 3 kilometres is already saved on your phone, it sends a position rounded to about 100 metres and the kind of place you're looking for. The server answers from a copy of OpenStreetMap's places that we load from its published map data. It doesn't pass these requests on to anyone and doesn't keep them. Where our copy doesn't cover a country yet, or our server can't be reached, the app sends the same request to OpenStreetMap's public map servers (Overpass) directly. No account id or other identifier is sent with any of these. When you ask for a suggested walk, Apple Maps provides the walking directions. If you search for a place you'd like to walk to, for example when you first open Hexclaim, the text you type and the area around you are sent to Apple Maps to find matching places. That place is kept only on your iPhone.</p>
+<p>To work out which area you're in, Hexclaim sends the positions where you use it, rounded to about 100 metres, to our server at Supabase (European Union, Ireland). After a reinstall it may send all of them at once. The server answers from a store of area outlines (such as boroughs and cities) that we load from OpenStreetMap's published map data. It never passes your positions on to anyone, and it doesn't keep them: the only thing it records is a count, per country, of how often it was asked about a country we haven't loaded yet, with no position, account id or time. Where our server can't answer, or can't be reached, the app asks OpenStreetMap's public map servers (Overpass and Nominatim) directly, with a rounded position. Like any web host, Supabase keeps short-lived technical logs of requests, such as IP addresses, for security and troubleshooting.</p>
+<p>To show which places are nearby, Hexclaim sends our server at Supabase the outline of the map area around you, several kilometres across. To count the places of one kind in an area, for Collections, it sends that area's OpenStreetMap id and the kind of place. When you tap Nearest new one in Collections and no matching place within 3 kilometres is already saved on your phone, it sends a position rounded to about 100 metres and the kind of place you're looking for. The server answers from a copy of OpenStreetMap's places that we load from its published map data. It doesn't pass these requests on to anyone and doesn't keep them. Where our copy doesn't cover a country yet, or our server can't be reached, the app sends the same request to OpenStreetMap's public map servers (Overpass) directly. No account id or other identifier is sent with any of these. On iPhone, when you ask for a suggested walk, Apple Maps provides the walking directions. If you search for a place you'd like to walk to, for example when you first open Hexclaim, the text you type and the area around you are sent to Apple Maps to find matching places. That place is kept only on your iPhone.</p>
+
+<h2>Crash reports</h2>
+<p>When Hexclaim crashes, freezes or hits an error, it sends a report to Sentry, our crash reporting provider, in the European Union (Germany). A report holds technical details such as the app version, the phone model and operating system, and what the app was doing at the time. It never includes your location, hexes, places, names, account id or IP address, and it isn't linked to you. We use reports only to fix bugs.</p>
 
 <h2>Invite links and this website</h2>
 <p>This website and its invite links are hosted by Vercel. Like most web hosts, Vercel keeps standard server logs, such as IP addresses, for a limited time. An invite link contains the group's invite code, which the page shows so you can type it into the app.</p>
@@ -88,6 +102,8 @@
   <li><strong>Settings › Account › Delete account</strong> deletes your account and everything we hold about you on our server straight away. It also signs Hexclaim out of your Apple ID, so it no longer appears under Sign in with Apple.</li>
   <li>Area outlines and places are public OpenStreetMap data. The per-country counts described under Maps and places have no link to anyone, so there is nothing in them to find or delete as yours.</li>
   <li>Data on your iPhone is removed when you delete the app. Your iCloud copy can be managed in your iPhone's iCloud settings.</li>
+  <li>Data on your Android phone is removed when you uninstall the app. Your Google backup can be managed in your phone's backup settings or your Google account.</li>
+  <li>Crash reports are kept by Sentry for a limited time, at most 90 days, and then deleted.</li>
 </ul>
 
 <h2>Your rights</h2>
