@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mherda.hexclaim",
+      "sha256_cert_fingerprints": [
+        "6E:E0:23:C7:3E:B7:E4:06:C1:0C:2F:F0:D2:5C:57:B8:9C:59:8B:7E:4B:FD:5E:04:13:F8:69:D4:86:1C:E8:B3",
+        "97:9A:BB:43:FC:9B:FB:33:AF:5C:F1:AE:F2:BA:62:5C:69:13:7A:A4:FE:F6:46:B3:2D:14:56:F0:BF:FE:E8:A3",
+        "D6:AE:D9:7F:DF:27:67:A9:4A:8A:4C:E4:A8:16:5D:44:16:75:18:70:60:AD:CD:62:16:EC:74:E8:34:1E:60:2F"
+      ]
+    }
+  }
+]
